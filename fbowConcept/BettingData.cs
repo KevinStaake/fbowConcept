@@ -45,6 +45,42 @@ namespace fbowConcept
             moneyWon = newMoneyWon;
         }
 
+        public string getSportName()
+        {
+            return sportName;
+        }
+        public string getHomeTeam()
+        {
+            return homeTeamName;
+        }
+        public string getAwayTeam()
+        {
+            return awayTeamName;
+        }
+        public DateTime getDateOfBet()
+        {
+            return dateOfBet;
+        }
+        public float getMoneyBet()
+        {
+            return moneyBet;
+        }
+        public string getResult()
+        {
+            return result;
+        }
+        public string getBetType()
+        {
+            return betType;
+        }
+        public float getBetOdds()
+        {
+            return betOdds;
+        }public float getMoneyWon()
+        {
+            return moneyWon;
+        }
+
         string sportName;
         string homeTeamName;
         string awayTeamName;
