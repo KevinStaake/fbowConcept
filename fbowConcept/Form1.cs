@@ -46,15 +46,38 @@ namespace fbowConcept
 
         private void addBetBtn_Click(object sender, EventArgs e)
         {
-            bettingData currentData = new bettingData();
+            getBetData();
+            moneyWonLBL.Text = calculateWinnings(resultsData).ToString();   
+
+        }
+        private double  calculateWinnings(List<bettingData> bets)
+        {
+            double winnings = 0.0;
+            for(int i = 0; i < bets.Count; i++)
+            {
+                winnings += bets[i].getMoneyWon();
+            }
+            return winnings;
+        }
+        private void clearTextBoxes()
+        {
+            sportTxt.Text = "";
+            homeTeamTxt.Text = "";
+            awayTeamTxt.Text = "";
+            moneyBetTxt.Text = "";
+            oddsTxt.Text = "";
+            moneyWonTxt.Text = "";
+        }
+        private void getBetData()
+        {
+             bettingData currentData = new bettingData();
             if (!anyTextBoxesEmpty())
             {
-                resultsList.Items.Add(sportTxt.Text);
                 currentData.setSportName(sportTxt.Text);
                 currentData.setHomeTeam(homeTeamTxt.Text);
                 currentData.setAwayTeam(awayTeamTxt.Text);
                 currentData.setDate(dateTimePicker1.Value);
-                
+
                 currentData.setResult(resultCmb.SelectedItem.ToString());
                 currentData.setBetType(betTypeCmb.SelectedItem.ToString());
                 float holder1, holder2, holder3;
@@ -70,25 +93,14 @@ namespace fbowConcept
                 else
                     MessageBox.Show("Odds/Money Won/Money Bet need to be Numbers", "error", MessageBoxButtons.OK);
                 resultsData.Add(currentData);
-                
+
             }
             else
                 MessageBox.Show("Labels can't be empty", "error", MessageBoxButtons.OK);
             
-
-
-        }
-        private void clearTextBoxes()
-        {
-            sportTxt.Text = "";
-            homeTeamTxt.Text = "";
-            awayTeamTxt.Text = "";
-            moneyBetTxt.Text = "";
-            oddsTxt.Text = "";
-            moneyWonTxt.Text = "";
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+    private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
                
         }

@@ -51,13 +51,14 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.resultCmb = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.betTypeCmb = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.resultCmb = new System.Windows.Forms.ComboBox();
-            this.betTypeCmb = new System.Windows.Forms.ComboBox();
             this.resultsList = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
+            this.moneyWonLBL = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -269,6 +270,14 @@
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
             // 
+            // resultCmb
+            // 
+            this.resultCmb.FormattingEnabled = true;
+            this.resultCmb.Location = new System.Drawing.Point(84, 13);
+            this.resultCmb.Name = "resultCmb";
+            this.resultCmb.Size = new System.Drawing.Size(100, 21);
+            this.resultCmb.TabIndex = 6;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.betTypeCmb);
@@ -278,6 +287,14 @@
             this.groupBox7.Size = new System.Drawing.Size(258, 39);
             this.groupBox7.TabIndex = 38;
             this.groupBox7.TabStop = false;
+            // 
+            // betTypeCmb
+            // 
+            this.betTypeCmb.FormattingEnabled = true;
+            this.betTypeCmb.Location = new System.Drawing.Point(84, 13);
+            this.betTypeCmb.Name = "betTypeCmb";
+            this.betTypeCmb.Size = new System.Drawing.Size(100, 21);
+            this.betTypeCmb.TabIndex = 7;
             // 
             // groupBox8
             // 
@@ -299,22 +316,6 @@
             this.groupBox9.TabIndex = 40;
             this.groupBox9.TabStop = false;
             // 
-            // resultCmb
-            // 
-            this.resultCmb.FormattingEnabled = true;
-            this.resultCmb.Location = new System.Drawing.Point(84, 13);
-            this.resultCmb.Name = "resultCmb";
-            this.resultCmb.Size = new System.Drawing.Size(100, 21);
-            this.resultCmb.TabIndex = 6;
-            // 
-            // betTypeCmb
-            // 
-            this.betTypeCmb.FormattingEnabled = true;
-            this.betTypeCmb.Location = new System.Drawing.Point(84, 13);
-            this.betTypeCmb.Name = "betTypeCmb";
-            this.betTypeCmb.Size = new System.Drawing.Size(100, 21);
-            this.betTypeCmb.TabIndex = 7;
-            // 
             // resultsList
             // 
             this.resultsList.Location = new System.Drawing.Point(452, 12);
@@ -333,11 +334,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // moneyWonLBL
+            // 
+            this.moneyWonLBL.AutoSize = true;
+            this.moneyWonLBL.Location = new System.Drawing.Point(259, 480);
+            this.moneyWonLBL.Name = "moneyWonLBL";
+            this.moneyWonLBL.Size = new System.Drawing.Size(22, 13);
+            this.moneyWonLBL.TabIndex = 43;
+            this.moneyWonLBL.Text = "0.0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 617);
+            this.Controls.Add(this.moneyWonLBL);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.resultsList);
             this.Controls.Add(this.groupBox9);
@@ -372,6 +383,7 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -407,6 +419,7 @@
         private System.Windows.Forms.ComboBox betTypeCmb;
         private System.Windows.Forms.ListView resultsList;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label moneyWonLBL;
     }
 }
 
