@@ -158,7 +158,7 @@
             this.addBetBtn.Name = "addBetBtn";
             this.addBetBtn.Size = new System.Drawing.Size(75, 23);
             this.addBetBtn.TabIndex = 10;
-            this.addBetBtn.Text = "Add result";
+            this.addBetBtn.Text = "Add Result";
             this.addBetBtn.UseVisualStyleBackColor = true;
             this.addBetBtn.Click += new System.EventHandler(this.addBetBtn_Click);
             // 
@@ -322,7 +322,7 @@
             this.resultsList.Location = new System.Drawing.Point(452, 12);
             this.resultsList.Name = "resultsList";
             this.resultsList.Size = new System.Drawing.Size(488, 417);
-            this.resultsList.TabIndex = 41;
+            this.resultsList.TabIndex = 45;
             this.resultsList.UseCompatibleStateImageBehavior = false;
             // 
             // button1
@@ -330,7 +330,7 @@
             this.button1.Location = new System.Drawing.Point(156, 406);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 42;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Clear Data";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

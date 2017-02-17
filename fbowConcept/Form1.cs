@@ -44,12 +44,19 @@ namespace fbowConcept
 
         }
 
+        //handles functionality to the add result button
         private void addBetBtn_Click(object sender, EventArgs e)
         {
             getBetData();
             updateResultsGraphics();
 
+            //test to see if items are being added to resultsData correctly and to see if net winnings is right
+
+            resultsList.Items.Add(resultsData[resultsData.Count - 1].getMoneyWon().ToString());
+
         }
+
+        //handles the functionality of calculating net winnings of a betting data list given as a parameter
         private double  calculateWinnings(List<bettingData> bets)
         {
             double winnings = 0.0;
@@ -59,6 +66,8 @@ namespace fbowConcept
             }
             return winnings;
         }
+
+        //clears the items in the text boxes so new values can be added.
         private void clearTextBoxes()
         {
             sportTxt.Text = "";
@@ -68,6 +77,8 @@ namespace fbowConcept
             oddsTxt.Text = "";
             moneyWonTxt.Text = "";
         }
+
+        //handles the updating the results graphics
         private void updateResultsGraphics()
         {
             moneyWonLBL.Text = calculateWinnings(resultsData).ToString();
@@ -78,6 +89,8 @@ namespace fbowConcept
             else
                 moneyWonLBL.ForeColor = System.Drawing.Color.Red;
         }
+
+        //gets the betting data from the forms filled out by the user and error controls the inputs
         private void getBetData()
         {
              bettingData currentData = new bettingData();
@@ -110,15 +123,19 @@ namespace fbowConcept
             
         }
 
+
     private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
                
         }
 
+        //handles the action performed when the Clear Data button is pressed
         private void button1_Click(object sender, EventArgs e)
         {
             clearTextBoxes();
         }
+
+        //returns a boolean whether any of the necessary  text boxes are empty on the form
         private bool anyTextBoxesEmpty()
         {
             if (sportTxt.Text == "" || homeTeamTxt.Text == "" ||
