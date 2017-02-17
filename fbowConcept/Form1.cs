@@ -47,7 +47,7 @@ namespace fbowConcept
         private void addBetBtn_Click(object sender, EventArgs e)
         {
             getBetData();
-            moneyWonLBL.Text = calculateWinnings(resultsData).ToString();   
+            updateResultsGraphics();
 
         }
         private double  calculateWinnings(List<bettingData> bets)
@@ -67,6 +67,16 @@ namespace fbowConcept
             moneyBetTxt.Text = "";
             oddsTxt.Text = "";
             moneyWonTxt.Text = "";
+        }
+        private void updateResultsGraphics()
+        {
+            moneyWonLBL.Text = calculateWinnings(resultsData).ToString();
+            if (calculateWinnings(resultsData) > 0.0)
+            {
+                moneyWonLBL.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+                moneyWonLBL.ForeColor = System.Drawing.Color.Red;
         }
         private void getBetData()
         {

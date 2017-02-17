@@ -59,6 +59,7 @@
             this.resultsList = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.moneyWonLBL = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -343,11 +344,21 @@
             this.moneyWonLBL.TabIndex = 43;
             this.moneyWonLBL.Text = "0.0";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(177, 479);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 13);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Net Winnings:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 617);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.moneyWonLBL);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.resultsList);
@@ -420,6 +431,7 @@
         private System.Windows.Forms.ListView resultsList;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label moneyWonLBL;
+        private System.Windows.Forms.Label label10;
     }
 }
 
