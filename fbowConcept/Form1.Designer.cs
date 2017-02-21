@@ -319,9 +319,9 @@
             // 
             // resultsList
             // 
-            this.resultsList.Location = new System.Drawing.Point(452, 12);
+            this.resultsList.Location = new System.Drawing.Point(332, 12);
             this.resultsList.Name = "resultsList";
-            this.resultsList.Size = new System.Drawing.Size(488, 417);
+            this.resultsList.Size = new System.Drawing.Size(654, 417);
             this.resultsList.TabIndex = 45;
             this.resultsList.UseCompatibleStateImageBehavior = false;
             // 
@@ -338,7 +338,7 @@
             // moneyWonLBL
             // 
             this.moneyWonLBL.AutoSize = true;
-            this.moneyWonLBL.Location = new System.Drawing.Point(259, 480);
+            this.moneyWonLBL.Location = new System.Drawing.Point(280, 446);
             this.moneyWonLBL.Name = "moneyWonLBL";
             this.moneyWonLBL.Size = new System.Drawing.Size(22, 13);
             this.moneyWonLBL.TabIndex = 43;
@@ -347,7 +347,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(177, 479);
+            this.label10.Location = new System.Drawing.Point(198, 445);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 44;
@@ -357,7 +357,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 617);
+            this.ClientSize = new System.Drawing.Size(998, 518);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.moneyWonLBL);
             this.Controls.Add(this.button1);

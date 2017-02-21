@@ -35,7 +35,19 @@ namespace fbowConcept
             betTypeCmb.SelectedIndex = 0;
             resultCmb.SelectedIndex = 0;
             sportTxt.Select();
-            
+            resultsList.View = View.Details;
+
+            resultsList.FullRowSelect = true;
+            resultsList.Columns.Add("Sport", 50);
+            resultsList.Columns.Add("Home Team", 75);
+            resultsList.Columns.Add("Away Team", 75);
+            resultsList.Columns.Add("Date", 100);
+            resultsList.Columns.Add("Money Bet", 75);
+            resultsList.Columns.Add("Result", 75);
+            resultsList.Columns.Add("Bet Type", 75);
+            resultsList.Columns.Add("Odds", 50);
+            resultsList.Columns.Add("Money Won", 75);
+
 
         }
 
@@ -51,11 +63,31 @@ namespace fbowConcept
             updateResultsGraphics();
 
             //test to see if items are being added to resultsData correctly and to see if net winnings is right
-
-            resultsList.Items.Add(resultsData[resultsData.Count - 1].getMoneyWon().ToString());
+            addBetDataToListview(resultsData[resultsData.Count - 1]);
+           
 
         }
 
+        private bool addBetDataToListview(bettingData currentBets)
+        {
+            
+            string[] dataStrings = new string[9];
+            ListViewItem listedData;
+            dataStrings[0] = currentBets.getSportName();
+            dataStrings[1] = currentBets.getHomeTeam();
+            dataStrings[2] = currentBets.getAwayTeam();
+            dataStrings[3] = currentBets.getDateOfBet().ToString("MMMM dd, yyyy");
+            dataStrings[4] = currentBets.getMoneyBet().ToString();
+            dataStrings[5] = currentBets.getResult();
+            dataStrings[6] = currentBets.getBetType();
+            dataStrings[7] = currentBets.getBetOdds().ToString();
+            dataStrings[8] = currentBets.getMoneyWon().ToString();
+            
+            listedData = new ListViewItem(dataStrings);
+            resultsList.Items.Add(listedData);
+
+            return true;
+        }
         //handles the functionality of calculating net winnings of a betting data list given as a parameter
         private double  calculateWinnings(List<bettingData> bets)
         {
@@ -70,12 +102,12 @@ namespace fbowConcept
         //clears the items in the text boxes so new values can be added.
         private void clearTextBoxes()
         {
-            sportTxt.Text = "";
-            homeTeamTxt.Text = "";
-            awayTeamTxt.Text = "";
-            moneyBetTxt.Text = "";
-            oddsTxt.Text = "";
-            moneyWonTxt.Text = "";
+            sportTxt.Clear();
+            homeTeamTxt.Clear();
+            awayTeamTxt.Clear();
+            moneyBetTxt.Clear();
+            oddsTxt.Clear();
+            moneyWonTxt.Clear();
         }
 
         //handles the updating the results graphics
